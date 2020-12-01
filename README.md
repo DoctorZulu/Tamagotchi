@@ -14,4 +14,5 @@ Web based tomagatchi clone
 3. Game design
     The UX will be simplistic with three buttons below the mock LCD screen. Time permitting the LCD will be encased in a handheld style css styled container similar to the original Tomagatchi egg shape.
 
-    
+
+![wireframe](https://github.com/DoctorZulu/tomagatchi/blob/main/styles/Media/Tomagatchi%20-%20Window.png)
