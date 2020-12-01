@@ -1,3 +1,40 @@
 body {
 font-family: 'Press Start 2P', cursive;
+background-color: rgb(160, 160, 160);
+}
+
+.game_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.screen_container {
+    background-color: orange;
+    border-radius: 60%;
+    width: 500px;
+    height: 500px;
+    box-shadow: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    position: absolute;
+    display: inline-block;
+	background: url('Media/baby big.png') no-repeat -36px -1535px;
+    width: 206px;
+    height: 194px;
+    
+}
+.baby {
+    position: absolute;
+    display: inline-block;
+	background: url('Media/baby big.png') no-repeat -71px -42px;
+	width: 53px;
+    height: 53px;
+    left: 70px;
+    top: 70px;
 }
