@@ -42,21 +42,22 @@ class Tamagotchi {
   
     changeImage(){
     const $gotchi = $(".gotchi_img");
-    if ($gotchi.hasClass("clicked")){
-        $gotchi.attr("id", 'baby')
-    }
-    else if (time === 50 && this.mood < 5 && this.health < 5){
+    $gotchi.attr("id", 'baby')
+    
+    if (time === 50 && this.mood < 5 && this.health < 5){
         $gotchi.attr("id", 'teenager')
     }
     else if (time === 60 && this.mood < 5 && this.health < 5){
         $gotchi.attr("id", 'adult')
     }
+}
       
     
    
 }
 
-    changeImageMood(health, mood){
+
+   /* changeImageMood(health, mood){
         if (mood>5 || health>5){
             $gotchi.attr("mood", 'sad')
         } else {
@@ -97,6 +98,7 @@ class Tamagotchi {
     }
 
 }
+*/
 let value = 1;
 const $progress = $("progress");
 const setTimer = function setTimer(){
@@ -123,11 +125,6 @@ let time = 1
 
 const instance = new Tamagotchi("Jim");
 
-const startGame = function startGame(){
-    if ($(".gotchi_img").hasClass("clicked") === true)
-        setTimer();
-    
-}
 
 $("#tamagotchi").on("click", "#egg", function (event){
     const $target = $(event.target);
@@ -137,5 +134,15 @@ $("#tamagotchi").on("click", "#egg", function (event){
         
 }
 });
+const startGame = function startGame(){
+    if ($gotchiImg.hasClass("gotchi_img clicked") === true){  
+        setTimer();
+         }};
+const domStart = function domStart(event){
+    event.stopPropagation();
+    startGame();
+}
 
-startGame()
+$("#tamagotchi").on("click", "#egg", function (event){
+    startGame();
+});
