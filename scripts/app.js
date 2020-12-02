@@ -1,77 +1,70 @@
-class tamagatchi {
-    constructor(name, health, mood, age){
+class tamagotchi {
+    constructor(name, health, mood){
+        // 0 is optimal range for each stat, 10 being death/unhappy
+    let timer = new Timer();
     this.alive = true;
     this.name = name;
     this.health = health;
     this.mood = mood;
-    this.age = age;
+    this.age = timer
     this.image = imgurl;
     }
   
     changeImage(age){
-    const $tamagotchi = $("#tamagotchi");
-    const $screen = $(".screen");
-    $screen.append($tamagotchi);
-    if (age === 1)
-    $tamagotchi.addClass("baby");
+    const $gotchi = $(".gotchi_img");
+    switch (age) {
+    case 120:
+        $gotchi.addClass(".baby");
+        break;
+    case 240: 
+        $gotchi.removeClass(".baby");
+        $gotchi.addClass(".child");
+        break;
+    case 360:
+        $gotchi.removeClass(".child");
+        $gotchi.addClass(".teenager");
+        break;
+    case 480:
+        $gotchi.removeClass(".teenager");
+        $gotchi.addClass(".adult");
+        break;
       
     }
+}
     reduceHunger(){
         this.health--
     }
 
     increaseHunger(){
+        let timer = new Timer();
+        timer.start();
+        if (timer === 10){
         this.health++
+        timer.reset();
     }
+}
 
     reduceMood(){
         this.mood--
     }
 
     increaseMood(){
+        let timer = new Timer();
+        timer.start();
+        if (timer === 10){
         this.mood++
+        timer.reset();
     }
-
-}
-function changeImage(age){
-    const $tamagotchi = $("#tamagotchi");
-    const $screen = $(".screen");
-    $screen.append($tamagotchi);
-    if (age === 1)
-    $tamagotchi.addClass("baby");
         
+    }
 
 }
 
+
   
   
-  const setTimer = function setTimer(){
-    const updateTime = function updateTime() {
-        console.log("timer", time);
-        $("#timer").text(`timer: ${time}s`);
-        time--;
-        if (time <= 0) {
-            clearInterval(timer);
-            age++;
-            $("#round").text(`round: ${round}`);
-            if (round <= 4) setUpRound();
-        }
-    }
-    const timer = setInterval(updateTime, 1000);
-};
-// 10 minute timer
-let time = 600
 
-let round = 1;
-
+const instance = new tamagotchi();
 const setUpGame = function setUpGame() {
-    $(".squares").empty(); // removes old squares after each round
-    if (round === 1) {
-        createSquares(25);
-        time = 600;
+    const instance = new tamagotchi();
     
-    } else {
-        alert("Game Over!");
-    }
-    setTimer();
-};

@@ -16,3 +16,4 @@ Web based tomagatchi clone
 
 
 ![wireframe](https://github.com/DoctorZulu/tomagatchi/blob/main/styles/Media/Tomagatchi%20-%20Window.png)
+
