@@ -14,21 +14,29 @@
 <body>
     <header>
         <i class="fas fa-bars" id="sidebar__activator"></i>
-        <h1 class="nes-text is-primary">Primary</h1>
+        <h1 class="nes-text is-primary">Arigato! Tamagotchi Lite</h1>
     </header>
 
     <section class="game_container">
+        <div class="stage">
         <div class="screen_container">
+            <span class="shadow"></span>    
             <div class="screen">
-                <div id="tamagotchi"></div>
-                    <span class="egg"></span>
-                    <span class="baby"></span>
-                    <span class="child"></span>
-                    <span class="teen"></span>
-                    <span class="adult"></span>
+                <div id="tamagotchi">
+                    <span class="gotchi_img" id="egg"></span>
+                    <span class="gotchi_img" id="baby"></span>
+                    <span class="gotchi_img" id="child"></span>
+                    <span class="gotchi_img" id="teen"></span>
+                    <span class="gotchi_img" id="adult"></span>
+                </div>
             </div>
         </div>
+        </div>
     </section>
+
+    <footer class="progressbar">
+        <progress class="nes-progress is-pattern" value="1" max="100"></progress>
+    </footer>
     
 </body>
 </html>
