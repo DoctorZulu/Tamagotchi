@@ -1,3 +1,7 @@
+const $button1 = $("#1");
+const $button2 = $("#1");
+const $button3 = $("#1");
+
 let sleepCount = 1;
 const sleepTimer = function sleepTimer() {
   const updateSleepTime = function updateSleepTime() {
@@ -15,7 +19,7 @@ const sleepTimer = function sleepTimer() {
 
 
 
-
+const $gotchiImg = $(".gotchi_img");
 
 
 class Tamagotchi {
@@ -25,7 +29,7 @@ class Tamagotchi {
     this.name = name;
     this.health = 0;
     this.mood = 0;
-    this.age = 1;
+    this.age = 0;
     }
     updateAge(){
         this.age += time
@@ -33,32 +37,40 @@ class Tamagotchi {
 
     
     
-      
+
     
   
-    changeImage(age){
+    changeImage(){
     const $gotchi = $(".gotchi_img");
-    switch (age) {
-    case 120:
-        $gotchi.addClass(".baby");
-        break;
-    case 240: 
-        $gotchi.removeClass(".baby");
-        $gotchi.addClass(".child");
-        break;
-    case 360:
-        $gotchi.removeClass(".child");
-        $gotchi.addClass(".teenager");
-        break;
-    case 480:
-        $gotchi.removeClass(".teenager");
-        $gotchi.addClass(".adult");
-        break;
-      
+    if ($gotchi.hasClass("clicked")){
+        $gotchi.attr("id", 'baby')
     }
+    else if (time === 50 && this.mood < 5 && this.health < 5){
+        $gotchi.attr("id", 'teenager')
+    }
+    else if (time === 60 && this.mood < 5 && this.health < 5){
+        $gotchi.attr("id", 'adult')
+    }
+      
+    
+   
 }
+
+    changeImageMood(health, mood){
+        if (mood>5 || health>5){
+            $gotchi.attr("mood", 'sad')
+        } else {
+            
+
+        } 
+
+        }
+        
+
     reduceHunger(){
+        if (health>0){
         this.health--
+        }else{}
     }
 
     increaseHunger(){
@@ -94,6 +106,7 @@ const setTimer = function setTimer(){
         instance.age++
         $progress.val(value);
         value++
+        instance.changeImage();
         if (time === 600 * 1000) {
             clearInterval(timer);
             
@@ -107,7 +120,22 @@ let time = 1
 
 
 
-setTimer();
+
 const instance = new Tamagotchi("Jim");
 
+const startGame = function startGame(){
+    if ($(".gotchi_img").hasClass("clicked") === true)
+        setTimer();
+    
+}
 
+$("#tamagotchi").on("click", "#egg", function (event){
+    const $target = $(event.target);
+    if ($target.hasClass("clicked") === false) {
+        console.log("poked the egg", $target);
+        $target.addClass("clicked")
+        
+}
+});
+
+startGame()

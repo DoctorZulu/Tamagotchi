@@ -153,7 +153,7 @@ footer{
     }
   }
 
-  #egg, #happy {
+  #egg {
     position: absolute;
     display: inline-block;
 	  background: url('Media/Other.png') no-repeat -636px -159px;
@@ -166,7 +166,7 @@ footer{
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
-.gotchi_img, #baby, #happy {
+.gotchi_img, #baby {
     position: absolute;
     display: inline-block;
 	  background: url('Media/baby big.png') no-repeat -71px -42px;
@@ -179,7 +179,7 @@ footer{
 
 }
 
-.gotchi_img #teenager #happy {
+.gotchi_img, #teenager {
   position: absolute;
   display: inline-block;
   background: url('Media/ufo big.png') no-repeat -46px -26px;
@@ -191,7 +191,7 @@ footer{
   nudge 5s linear infinite alternate;
 
 }
-.gotchi_img #adult #happy {
+.gotchi_img #adult {
   position: absolute;
   display: inline-block;
   background: url('Media/baby big.png') no-repeat -71px -42px;
@@ -216,7 +216,7 @@ footer{
 
 }
 
-.gotchi_img #teenager #sad {
+.gotchi_img .teenager #sad {
 position: absolute;
 display: inline-block;
 background: url('Media/ufo big.png') no-repeat -94px -310px;
