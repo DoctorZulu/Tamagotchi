@@ -191,12 +191,12 @@ footer{
   nudge 5s linear infinite alternate;
 
 }
-.gotchi_img #adult {
+.gotchi_img, #adult {
   position: absolute;
   display: inline-block;
-  background: url('Media/baby big.png') no-repeat -71px -42px;
-  width: 53px;
-  height: 53px;
+  background: url('Media/big addy.png') no-repeat -81px -47px;
+	width: 46px;
+	height: 50px;
   left: 70px;
   top: 70px;
   animation: 
@@ -240,3 +240,15 @@ animation:
 nudge 5s linear infinite alternate;
 
 }
+.gotchi_img #winner {
+  position: absolute;
+  display: inline-block;
+  background: url('Media/Other.png') no-repeat -159px -407px;
+	width: 98px;
+	height: 93px;
+  left: 70px;
+  top: 70px;
+  animation: 
+  nudge 5s linear infinite alternate;
+  
+  }

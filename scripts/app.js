@@ -42,9 +42,11 @@ class Tamagotchi {
   
     changeImage(){
     const $gotchi = $(".gotchi_img");
+    
+    if (time <=49){
     $gotchi.attr("id", 'baby')
     
-    if (time === 50 && this.mood < 5 && this.health < 5){
+    }if (time === 50 && this.mood < 5 && this.health < 5){
         $gotchi.attr("id", 'teenager')
     }
     else if (time === 60 && this.mood < 5 && this.health < 5){
