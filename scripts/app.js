@@ -30,24 +30,24 @@ class Tamagotchi {
     changeImage(){
     const $gotchi = $(".gotchi_img");
     
-    if (time <=14){
+    if (this.age <=14){
     if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'babysad')
     }else {$gotchi.attr("id", 'baby')}
     
-    }else if (this.age >= 15 && time < 40 && this.mood < 5 && this.health < 5){
-    if (this.mood>5 || this.health>5){
+    }else if (this.age >= 15 && this.age< 40){
+        if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'teenagersad')
         }else{ $gotchi.attr("id", 'teenager')
     }
 
-    }else if (time > 40 && this.mood < 5 && this.health < 5){
+    }else if (this.age > 40){
         if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'adultsad')
         }else { $gotchi.attr("id", 'adult')
 }
 }
-    }
+    } 
     
         
 
@@ -83,18 +83,22 @@ const $progress = $("progress");
 const setTimer = function setTimer(){
     const updateTime = function updateTime() {
         //console.log("timer", time);
+        const $gotchi = $(".gotchi_img");
         time++;
         instance.age++
         $progress.val(value);
         value++
         instance.changeImage();
         
+        
+        
         if (time % 10 === 0){
             instance.increaseHunger()
             instance.increaseMood()
             $(".poop").show();
-        }else if (time === 600 * 1000) {
+        }else if (time === 12000) {
             clearInterval(timer);
+            $gotchi.attr("id", 'winner');
             
         }
     }
