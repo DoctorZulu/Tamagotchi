@@ -105,14 +105,7 @@ footer{
     transform: translateX(-80px) translateY(-90px) skewX(-20deg);
     filter: blur(10px);
   }
-.screen_container .shadow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-    transform: rotateX(90deg) translateZ(-150px);
-    z-index: -1;
-  }
+
 
 .screen {
     position: absolute;
@@ -166,12 +159,12 @@ footer{
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
-.gotchi_img, #baby {
+.gotchi_img, #baby{
     position: absolute;
     display: inline-block;
-	  background: url('Media/baby big.png') no-repeat -71px -42px;
-	  width: 53px;
-    height: 53px;
+	  background: url('Media/baby big resize.png') no-repeat -452px -105px;
+	  width: 22px;
+	  height: 18px;
     left: 70px;
     top: 70px;
     animation: 
@@ -179,7 +172,7 @@ footer{
 
 }
 
-.gotchi_img, #teenager {
+.gotchi_img, #teenager{
   position: absolute;
   display: inline-block;
   background: url('Media/ufo big.png') no-repeat -46px -26px;
@@ -191,7 +184,7 @@ footer{
   nudge 5s linear infinite alternate;
 
 }
-.gotchi_img, #adult {
+.gotchi_img, #adult{
   position: absolute;
   display: inline-block;
   background: url('Media/big addy.png') no-repeat -81px -47px;
@@ -203,12 +196,12 @@ footer{
   nudge 5s linear infinite alternate;
 
 }
-.gotchi_img, #baby, #sad {
+.gotchi_img, #babysad {
   position: absolute;
   display: inline-block;
-  background: url('Media/baby big.png') no-repeat -154px -614px;
-	width: 53px;
-	height: 53px;
+  background: url('Media/baby big resize.png') no-repeat -79px -252px;
+	width: 22px;
+	height: 18px;
   left: 70px;
   top: 70px;
   animation: 
@@ -216,7 +209,7 @@ footer{
 
 }
 
-.gotchi_img, #teenager, #sad {
+.gotchi_img, #teenagersad {
 position: absolute;
 display: inline-block;
 background: url('Media/ufo big.png') no-repeat -94px -310px;
@@ -228,7 +221,7 @@ animation:
 nudge 5s linear infinite alternate;
 
 }
-.gotchi_img, #adult, #sad {
+.gotchi_img, #adultsad {
 position: absolute;
 display: inline-block;
 background: url('Media/big addy.png') no-repeat -154px -537px;
@@ -252,3 +245,31 @@ nudge 5s linear infinite alternate;
   nudge 5s linear infinite alternate;
   
   }
+  .yum{
+    padding: 5px;
+    position: absolute;
+    display: none;
+  }
+
+  .hehe{
+    padding: 5px;
+    position: absolute;
+    display: none;
+  }
+
+  .huh{
+    padding: 5px;
+    position: absolute;
+    display: none;
+  }
+.poop {
+  background: url('Media/Other.png') no-repeat -724px -441px;
+	width: 22px;
+  height: 23px;
+  position: absolute;
+  z-index: 500;
+  bottom: 205px;
+  right: 125px;
+  display: none;
+  
+}
