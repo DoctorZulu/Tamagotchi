@@ -1,21 +1,8 @@
 const $button1 = $("#1");
-const $button2 = $("#1");
-const $button3 = $("#1");
+const $button2 = $("#2");
+const $button3 = $("#5");
 
-let sleepCount = 1;
-const sleepTimer = function sleepTimer() {
-  const updateSleepTime = function updateSleepTime() {
-    sleepCount++;
-    if(sleepCount >= 10){
-        clearInterval(timer);
-      }
-    /* if (sleepCount >= 10) {
-        clearInterval(timer); */ 
-        /* make timer stop at 10 */
-        /* add something here to call a function that will print Player died in his sleep */
-  };
-  const timer = setInterval(updateSleepTime, 60 * 1000);  
-}; 
+
 
 
 
@@ -27,8 +14,8 @@ class Tamagotchi {
         // 0 is optimal range for each stat, 10 being death/unhappy
     this.alive = true;
     this.name = name;
-    this.health = 0;
-    this.mood = 0;
+    this.health = 7;
+    this.mood = 7;
     this.age = 0;
     }
     updateAge(){
@@ -56,13 +43,15 @@ class Tamagotchi {
       
     
    
-}
 
 
-   /* changeImageMood(health, mood){
-        if (mood>5 || health>5){
+
+   changeImageMood(){
+    const $gotchi = $(".gotchi_img");
+        if (this.mood>5 || this.health>5){
             $gotchi.attr("mood", 'sad')
         } else {
+            $gotchi.attr("mood", '')
             
 
         } 
@@ -77,30 +66,24 @@ class Tamagotchi {
     }
 
     increaseHunger(){
-        let timer = new Timer();
-        timer.start();
-        if (timer === 10){
         this.health++
-        timer.reset();
+        
     }
-}
+
 
     reduceMood(){
         this.mood--
     }
 
     increaseMood(){
-        let timer = new Timer();
-        timer.start();
-        if (timer === 10){
         this.mood++
-        timer.reset();
-    }
         
     }
-
+        
 }
-*/
+
+
+
 let value = 1;
 const $progress = $("progress");
 const setTimer = function setTimer(){
@@ -111,7 +94,11 @@ const setTimer = function setTimer(){
         $progress.val(value);
         value++
         instance.changeImage();
-        if (time === 600 * 1000) {
+        instance.changeImageMood();
+        if (time % 10 === 0){
+            instance.increaseHunger()
+            instance.increaseMood()
+        }else if (time === 600 * 1000) {
             clearInterval(timer);
             
         }

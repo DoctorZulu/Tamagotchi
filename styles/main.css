@@ -203,12 +203,12 @@ footer{
   nudge 5s linear infinite alternate;
 
 }
-.gotchi_img #baby #sad {
+.gotchi_img, #baby, #sad {
   position: absolute;
   display: inline-block;
-  background: url('Media/baby big.png') no-repeat -154px -750px;
+  background: url('Media/baby big.png') no-repeat -154px -614px;
 	width: 53px;
-	height: 53px;;
+	height: 53px;
   left: 70px;
   top: 70px;
   animation: 
@@ -216,31 +216,31 @@ footer{
 
 }
 
-.gotchi_img .teenager #sad {
+.gotchi_img, #teenager, #sad {
 position: absolute;
 display: inline-block;
 background: url('Media/ufo big.png') no-repeat -94px -310px;
-	width: 37px;
-	height: 38px;
+width: 37px;
+height: 38px;
 left: 70px;
 top: 70px;
 animation: 
 nudge 5s linear infinite alternate;
 
 }
-.gotchi_img #adult #sad {
+.gotchi_img, #adult, #sad {
 position: absolute;
 display: inline-block;
-background: url('Media/baby big.png') no-repeat -71px -42px;
-width: 53px;
-height: 53px;
+background: url('Media/big addy.png') no-repeat -154px -537px;
+width: 46px;
+height: 50px;
 left: 70px;
 top: 70px;
 animation: 
 nudge 5s linear infinite alternate;
 
 }
-.gotchi_img #winner {
+.gotchi_img, #winner {
   position: absolute;
   display: inline-block;
   background: url('Media/Other.png') no-repeat -159px -407px;
