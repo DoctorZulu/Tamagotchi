@@ -44,13 +44,12 @@ class Tamagotchi {
         }else{ $gotchi.attr("id", 'teenager')
     }
 
-    }else if (this.age > 40){
+    }else if (this.age > 40 && this.age < 119){
         if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'adultsad')
         }else { $gotchi.attr("id", 'adult')
     }
-    }   
-    else if (this.age >= 120){
+    }else if (this.age >= 119){
         $gotchi.attr("id", 'winner')
     }
     } 
@@ -95,7 +94,7 @@ const setTimer = function setTimer(){
         $progress.val(value);
         value++
         instance.changeImage();
-        if (time === 120 || instance.alive === false) {
+        if (time === 121 || instance.alive === false) {
             clearInterval(timer);
             $(".game").show();
             $(".game").append(` ${instance.name}`)
