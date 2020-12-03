@@ -94,10 +94,16 @@ const setTimer = function setTimer(){
         $progress.val(value);
         value++
         instance.changeImage();
-        if (time === 121 || instance.alive === false) {
+        if (instance.alive === false) {
             clearInterval(timer);
             $(".game").show();
-            $(".game").append(` ${instance.name}`)
+            $(".game").append(` ${instance.name} is dead...`)
+        
+        
+        }else if (time === 120) {
+            clearInterval(timer);
+            $(".game").show();
+            $(".game").append(` ${instance.name} lived a long and happy life!`)
         
         
         }else if (time % 10 === 0){
