@@ -1,7 +1,7 @@
 const $button1 = $("#1");
 const $button2 = $("#2");
 const $button3 = $("#3");
-
+const $submitButton = $(".submitButton")
 
 
 
@@ -97,8 +97,8 @@ const setTimer = function setTimer(){
         instance.changeImage();
         if (time === 120 || instance.alive === false) {
             clearInterval(timer);
-            $("h1").append(`
-            <h2>Game Over!</h2>`)
+            $(".game").show();
+            $(".game").append(` ${instance.name}`)
         
         
         }else if (time % 10 === 0){
@@ -116,7 +116,6 @@ let time = 1
 
 
 
-const instance = new Tamagotchi("Jim");
 
 
 $("#tamagotchi").on("click", "#egg", function (event){
@@ -153,3 +152,10 @@ $button3.on("click", function (event){
     $(".huh").hide(2000);
     $(".poop").hide();
 });
+
+let $playerName;
+$submitButton.on("click", function logPlayerName(){
+    $playerName = document.getElementById('tamaname').value;
+    instance = new Tamagotchi($playerName)
+    $submitButton.hide()
+$("input").hide()})
