@@ -164,3 +164,7 @@ $submitButton.on("click", function logPlayerName(){
     instance = new Tamagotchi($playerName)
     $submitButton.hide()
 $("input").hide()})
+
+$("body").on("click", function() {
+    document.getElementById("music").play();
+});

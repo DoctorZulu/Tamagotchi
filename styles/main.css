@@ -53,6 +53,10 @@ progress{
   justify-content: center;
   width: 90vh;
 }
+music{
+  align-items: center;
+  justify-content: center;
+}
 
 .button_container{
   display: flex;
