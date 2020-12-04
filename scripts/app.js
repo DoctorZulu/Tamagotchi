@@ -165,6 +165,6 @@ $submitButton.on("click", function logPlayerName(){
     $submitButton.hide()
 $("input").hide()})
 
-$("body").on("click", function() {
+$(".submitButton").on("click", function() {
     document.getElementById("music").play();
 });
