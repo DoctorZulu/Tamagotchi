@@ -108,6 +108,7 @@ const setTimer = function setTimer(){
         
         }else if (time % 10 === 0){
             instance.increaseHunger()
+            instance.increaseHunger()
             instance.increaseMood()
             $(".poop").show();
         }}

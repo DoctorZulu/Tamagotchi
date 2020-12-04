@@ -169,6 +169,7 @@ footer{
 	  height: 33px;
     left: 70px;
     top: 70px;
+    animation: none;
 }
 .gotchi_img, #egg:hover {
   animation: shake 0.5s;
