@@ -38,13 +38,13 @@ class Tamagotchi {
         $gotchi.attr("id", 'babysad')
         }else {$gotchi.attr("id", 'baby')}
     
-    }else if (this.age >= 15 && this.age< 40){
+    }else if (this.age >= 40 && this.age< 80){
         if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'teenagersad')
         }else{ $gotchi.attr("id", 'teenager')
     }
 
-    }else if (this.age > 40 && this.age < 119){
+    }else if (this.age > 79 && this.age < 119){
         if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'adultsad')
         }else { $gotchi.attr("id", 'adult')
