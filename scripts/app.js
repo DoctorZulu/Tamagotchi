@@ -87,7 +87,7 @@ let value = 1;
 const $progress = $("progress");
 const setTimer = function setTimer(){
     const updateTime = function updateTime() {
-        //console.log("timer", time);
+        console.log("timer", time);
         const $gotchi = $(".gotchi_img");
         time++;
         instance.age++
@@ -97,19 +97,21 @@ const setTimer = function setTimer(){
         if (instance.alive === false) {
             clearInterval(timer);
             $(".game").show();
-            $(".game").append(` ${instance.name} is dead...`)
+            $(".game").append(` ${instance.name} </br> is dead...`)
         
         
         }else if (time === 120) {
             clearInterval(timer);
             $(".game").show();
-            $(".game").append(` ${instance.name} lived a long and happy life!`)
+            $(".game").append(` ${instance.name} </br> lived a long and happy life!`)
         
         
         }else if (time % 10 === 0){
             instance.increaseHunger()
             instance.increaseMood()
             $(".poop").show();
+        }else if ($(".poop").show()){
+            instance.increaseHunger()
         }
     }
     const timer = setInterval(updateTime, 1000);

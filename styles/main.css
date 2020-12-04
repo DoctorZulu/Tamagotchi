@@ -15,7 +15,7 @@ h1 {
 
 }
 h2 {
-  left: 45%;
+  left: 40%;
   display: none;
   
   
@@ -248,7 +248,7 @@ animation:
 nudge 5s linear infinite alternate;
 
 }
-.gotchi_img, #winner {
+#winner {
   position: absolute;
   display: inline-block;
   background: url('Media/Other.png') no-repeat -159px -407px;
@@ -256,11 +256,12 @@ nudge 5s linear infinite alternate;
 	height: 93px;
   left: 70px;
   top: 70px;
+  animation: none;
   
   
  
   }
-  .gotchi_img, #dead {
+  #dead {
     position: absolute;
     display: inline-block;
     background: url('Media/Other.png') no-repeat -695px -235px;
@@ -268,6 +269,7 @@ nudge 5s linear infinite alternate;
 	  height: 37px;
     left: 70px;
     top: 70px;
+    animation: none;
     
     
     
