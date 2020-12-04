@@ -33,7 +33,7 @@ class Tamagotchi {
         this.alive = false
         $gotchi.attr("id", 'dead');
     } 
-    else if (this.age <=14){
+    else if (this.age <=39){
         if (this.mood>5 || this.health>5){
         $gotchi.attr("id", 'babysad')
         }else {$gotchi.attr("id", 'baby')}
