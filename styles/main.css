@@ -179,6 +179,7 @@ music{
 	  height: 33px;
     left: 70px;
     top: 70px;
+    cursor: pointer;
     animation: none;
 }
 .gotchi_img, #egg:hover {
