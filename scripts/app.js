@@ -110,10 +110,7 @@ const setTimer = function setTimer(){
             instance.increaseHunger()
             instance.increaseMood()
             $(".poop").show();
-        }else if ($(".poop").show()){
-            instance.increaseHunger()
-        }
-    }
+        }}
     const timer = setInterval(updateTime, 1000);
 };
 
