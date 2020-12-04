@@ -36,6 +36,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    
    
    
 
@@ -44,9 +45,14 @@ footer{
     padding: 100px;
     position: absolute;
     width: 100%;
-    bottom: 20vh;
+    bottom: 5vh;
 }
 
+progress{
+  align-items: center;
+  justify-content: center;
+  width: 90vh;
+}
 
 .button_container{
   display: flex;
